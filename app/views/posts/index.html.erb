@@ -9,6 +9,7 @@
 
 <% @posts.each do |post| %>
    <div class="post" data-id=<%= post.id%> data-check<%= post.checked %>>
+   <%#カスタムデーターでpostのidを取得している、checkedも同じく取得 %>
       <div class ="post-date">
          投稿日時:<%= post.created_at %>
       </div>

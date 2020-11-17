@@ -6,6 +6,7 @@ function memo() {
     XHR.open("POST","/posts",true);
     XHR.responseType ="json";
     XHR.send(formData);
+    
     XHR.onload =()=>{
       if (XHR.status != 200) {
         alert(`Error ${XHR.status}: ${XHR.statusText}`);
@@ -15,6 +16,7 @@ function memo() {
       const list = document.getElementById("list")
       const formText = document.getElementById("content");
       
+        
       const HTML =`
       <div class="post" data-id=${item.id}>
           <div class="post-date">
